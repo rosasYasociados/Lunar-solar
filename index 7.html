@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Eclipses</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0a0614">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Eclipses">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+<nav id="menu">
+  <button data-mode="lunar">Eclipse Lunar</button>
+  <button data-mode="solar" class="on">Eclipse Solar</button>
+  <button data-mode="luna">Luna</button>
+  <button data-mode="sol">Sol</button>
+  <button data-mode="3d">Vista 3D</button>
+  <button data-mode="sistema">Sistema Solar</button>
+</nav>
+<canvas id="c"></canvas>
+<div id="hud" hidden></div>
+<aside id="panel" hidden>
+  <h2 id="pTitle"></h2>
+  <p id="pBody"></p>
+  <p id="pLive"></p>
+</aside>
+<div id="controls">
+  <p id="info"></p>
+  <button id="sound">🔇 Sonido</button>
+  <button id="meteorBtn">☄ Meteorito</button>
+  <button id="repairBtn" style="display:none">🔄 Reparar</button>
+  <button id="annBtn">Tipo: Total</button>
+  <button id="landBtn">Paisaje: Apagado</button>
+  <button id="gameBtn">🎯 Juego</button>
+  <button id="dataBtn">ℹ Datos</button>
+  <button id="play">▶ Reproducir</button>
+  <label id="speedBox">Velocidad <input type="range" id="speed" min="0.2" max="3" step="0.1" value="1"></label>
+  <label id="tiltBox">Inclinación <input type="range" id="tilt" min="0" max="1" step="0.01" value="0.55"></label>
+  <label id="phaseBox">Fase <input type="range" id="phase" min="0" max="1" step="0.005" value="0.5"></label>
+</div>
+<script src="script.js?v=7"></script>
+</body>
+</html>
